@@ -1,8 +1,9 @@
+import mockupImg from "../../assets/images/image-mockups.png";
 import Container from "../Container";
 
 function LeftSide() {
   return (
-    <div>
+    <div className="w-[40%]">
       <h1 className="text-3xl">Next generation digital banking</h1>
       <p>
         Take your financial life online. Your Easybank account will be a
@@ -17,10 +18,17 @@ function LeftSide() {
 
 function HeroSection() {
   return (
-    <section className="bg-userVeryLightGray h-[735px]">
+    <section className="relative h-[735px] bg-userVeryLightGray">
       <Container>
-        <div className="grid h-full grid-cols-[1fr_650px] grid-rows-1 items-center justify-between">
+        <div className="flex h-full items-center justify-between">
           <LeftSide />
+          <div className="h-full w-[60%] bg-userBgIntroDesktop bg-[length:170%] bg-[10%_60%] bg-no-repeat">
+            <img
+              src={mockupImg}
+              alt="Mobile phones mockup"
+              className="w-full translate-x-32"
+            />
+          </div>
         </div>
       </Container>
     </section>
